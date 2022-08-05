@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
   entry: path.resolve(__dirname, '../src/index.ts'),
   target: ['web', 'es5'],
@@ -32,5 +30,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js'],
+    extensionAlias: {
+      '.js': ['.ts', '.js'],
+    }
   },
 }
